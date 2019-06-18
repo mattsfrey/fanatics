@@ -15,7 +15,7 @@ _Note: You may need to edit the docker-compose.yaml, specifically the lines:_
 ```
 volumes:
  - .:/go/src/fanatics
-       working_dir: /go/src/fanatics
+working_dir: /go/src/fanatics
 ```       
 
 _To match where you have cloned the repo, if your $GOPATH is non default or you cloned outside of it - I'm a total newb to golang and was just following a tutorial on setting up a go app with redis using docker compose so not sure about this, sorry!_  
