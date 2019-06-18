@@ -107,8 +107,6 @@ func main() {
 				fmt.Println("Error inside redis subscription: ", err)
 			}
 
-			fmt.Println("got msg: '" + msg.String() + "'")
-
 			fmt.Println("Received host certificate expiration message, regenerating")
 			jobChan <- Job{hostDomain}
 		}
