@@ -10,6 +10,16 @@ Clone the repo and run application using:
 
 The app should start along with a redis instance in docker containers, you will need to make sure port 8080 on localhost is open or change the ports config in `docker-compose.yaml`
 
+_Note: You may need to edit the docker-compose.yaml, specifically the lines:_
+
+```
+volumes:
+ - .:/go/src/fanatics
+       working_dir: /go/src/fanatics
+```       
+
+_To match where you have cloned the repo, if your $GOPATH is non default or you cloned outside of it - I'm a total newb to golang and was just following a tutorial on setting up a go app with redis using docker compose so not sure about this, sorry!_  
+       
 The host domain for the server is set to `example.com` in code and should be available immediately by running:
 
 `curl 'http://localhost:8080/cert/example.com'`
