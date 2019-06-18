@@ -101,7 +101,7 @@ func main() {
 	go func(){
 		psNewMessage, _ := redisClient.PSubscribe(hostCertSub)
 		for {
-			msg, err := psNewMessage.ReceiveMessage()
+			_, err := psNewMessage.ReceiveMessage()
 
 			if err != nil {
 				fmt.Println("Error inside redis subscription: ", err)
